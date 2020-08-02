@@ -17,5 +17,11 @@ class UserSeeder extends Seeder
             'email' => 'raul.munoz@uprevenue.mx',
             'password' => bcrypt('BAba#1#2#3')
         ]);
+
+        User::create([
+            'name' => 'Andrei Florea',
+            'email' => 'office@infraweb.ro',
+            'password' => bcrypt('Infraweb123.')
+        ]);
     }
 }

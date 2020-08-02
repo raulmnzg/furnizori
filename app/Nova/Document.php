@@ -3,10 +3,13 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\File;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Maatwebsite\LaravelNovaExcel\Actions\DownloadExcel;
 
-class Invoice extends Resource
+class Document extends Resource
 {
     /**
      * Resource Label
@@ -15,7 +18,7 @@ class Invoice extends Resource
      */
     public static function label()
     {
-        return 'Facturare';
+        return 'Documente';
     }
 
     /**
@@ -25,7 +28,7 @@ class Invoice extends Resource
      */
     public static function singularLabel()
     {
-        return 'Factură';
+        return 'Document';
     }
 
     public static $group = 'Link-uri utile';
@@ -35,14 +38,14 @@ class Invoice extends Resource
      *
      * @var string
      */
-    public static $model = \App\Invoice::class;
+    public static $model = \App\Document::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'name';
 
     /**
      * The columns that should be searched.
@@ -50,7 +53,7 @@ class Invoice extends Resource
      * @var array
      */
     public static $search = [
-        'id',
+        'id', 'name'
     ];
 
     /**
@@ -63,6 +66,12 @@ class Invoice extends Resource
     {
         return [
             ID::make(__('ID'), 'id')->sortable(),
+
+            Text::make('Nume', 'name')
+                ->rules('required'),
+
+            File::make('Document', 'file')
+                ->rules('required'),
         ];
     }
 
@@ -107,6 +116,8 @@ class Invoice extends Resource
      */
     public function actions(Request $request)
     {
-        return [];
+        return [
+            new DownloadExcel,
+        ];
     }
 }

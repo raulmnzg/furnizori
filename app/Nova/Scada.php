@@ -3,10 +3,12 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Invoice extends Resource
+class Scada extends Resource
 {
     /**
      * Resource Label
@@ -15,7 +17,7 @@ class Invoice extends Resource
      */
     public static function label()
     {
-        return 'Facturare';
+        return 'Consumuri SCADA';
     }
 
     /**
@@ -25,17 +27,17 @@ class Invoice extends Resource
      */
     public static function singularLabel()
     {
-        return 'Factură';
+        return 'Consum';
     }
 
-    public static $group = 'Link-uri utile';
+    public static $group = 'Date de Consum';
 
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\Invoice::class;
+    public static $model = \App\Scada::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -63,6 +65,29 @@ class Invoice extends Resource
     {
         return [
             ID::make(__('ID'), 'id')->sortable(),
+
+            BelongsTo::make('Client', 'client', 'App\Nova\Client'),
+
+            Text::make('CLC')->rules('required'),
+
+            Text::make('Data Consum SCADA')
+                ->rules('required'),
+
+            Text::make('Consum - Valoare initiala [mc]')
+                ->rules('required'),
+
+            Text::make('Energie - Valoare initiala [MWh]')
+                ->rules('required'),
+
+            Text::make('Consum - Valoare finala [mc]')
+                ->rules('required'),
+
+            Text::make('Energie - Valoare finala [MWh]')
+                ->rules('required'),
+
+            Text::make('Valoare PCS zilnica [kWh/mc')
+                ->rules('required'),
+
         ];
     }
 

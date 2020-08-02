@@ -20,32 +20,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5ed45fa-9766-4d8d-9bbd-3aaf6447a8c3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/nova/auth/layout.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/nova/auth/login.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/nova/auth/partials/errors.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/nova/auth/partials/header.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/nova/auth/partials/heading.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/nova/auth/partials/logo.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/nova/auth/passwords/email.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/nova/auth/passwords/reset.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/nova/dashboard.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/nova/dashboard/navigation.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/nova/layout.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/nova/resources/navigation.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/nova/router.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Nova/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Nova/Invoice.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/Invoice.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Nova/Page.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/Page.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/NovaServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/NovaServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/nova.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/nova.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_02_175020_create_consumption_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_02_175020_create_consumption_categories_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/nova/partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/nova/partials/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/nova/partials/logo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/nova/partials/logo.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/nova/partials/meta.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/nova/partials/meta.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UserSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vendor/nova/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/nova/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vendor/nova/partials/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/nova/partials/user.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vendor/nova/resources/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/nova/resources/navigation.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -178,7 +171,6 @@
       <path value="$PROJECT_DIR$/vendor/benjaminhirsch/nova-slug-field" />
       <path value="$PROJECT_DIR$/vendor/coderello/laravel-nova-lang" />
       <path value="$PROJECT_DIR$/vendor/jameslkingsley/nova-stripe-theme" />
-      <path value="$PROJECT_DIR$/vendor/david-griffiths/nova-dark-theme" />
       <path value="$PROJECT_DIR$/vendor/silvanite/novafieldcheckboxes" />
       <path value="$PROJECT_DIR$/vendor/silvanite/brandenburg" />
       <path value="$PROJECT_DIR$/vendor/silvanite/novatoolpermissions" />
@@ -192,6 +184,12 @@
       <path value="$PROJECT_DIR$/vendor/markbaker/complex" />
       <path value="$PROJECT_DIR$/vendor/markbaker/matrix" />
       <path value="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet" />
+      <path value="$PROJECT_DIR$/vendor/pdewit/nova-external-url" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf" />
     </include_path>
   </component>
   <component name="ProjectId" id="1fYHAworcgJVYqsDPcQtJQ7BtcO" />
@@ -221,7 +219,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596387965980</updated>
-      <workItem from="1596387967937" duration="7289000" />
+      <workItem from="1596387967937" duration="12858000" />
     </task>
     <servers />
   </component>
@@ -240,13 +238,36 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="357" y="482" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1596390118197">
+    <state x="357" y="482" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1596408541077">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="357" y="482" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1596390118197" />
-    <state x="302" y="331" width="670" height="676" key="search.everywhere.popup" timestamp="1596404387084">
+    <state x="357" y="482" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1596408541077" />
+    <state x="306" y="437" key="NewPhpClassDialog" timestamp="1596406473373">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="302" y="331" width="670" height="676" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1596404387084" />
+    <state x="306" y="437" key="NewPhpClassDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1596406473373" />
+    <state x="303" y="637" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596407131431">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="303" y="637" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1440@0.0.2560.1440" timestamp="1596407131431" />
+    <state x="218" y="328" width="596" height="783" key="find.popup" timestamp="1596404970621">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="218" y="328" width="596" height="783" key="find.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1596404970621" />
+    <state x="302" y="331" width="670" height="676" key="search.everywhere.popup" timestamp="1596410330442">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="302" y="331" width="670" height="676" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1596410330442" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/vendor/nova/layout.blade.php</url>
+          <line>16</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

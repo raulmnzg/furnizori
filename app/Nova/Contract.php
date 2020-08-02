@@ -6,36 +6,14 @@ use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Invoice extends Resource
+class Contract extends Resource
 {
-    /**
-     * Resource Label
-     *
-     * @return string
-     */
-    public static function label()
-    {
-        return 'Facturare';
-    }
-
-    /**
-     * Resource Label
-     *
-     * @return string
-     */
-    public static function singularLabel()
-    {
-        return 'Factură';
-    }
-
-    public static $group = 'Link-uri utile';
-
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\Invoice::class;
+    public static $model = \App\Contract::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -56,7 +34,7 @@ class Invoice extends Resource
     /**
      * Get the fields displayed by the resource.
      *
-     * @param Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return array
      */
     public function fields(Request $request)
@@ -69,7 +47,7 @@ class Invoice extends Resource
     /**
      * Get the cards available for the request.
      *
-     * @param Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return array
      */
     public function cards(Request $request)
@@ -80,7 +58,7 @@ class Invoice extends Resource
     /**
      * Get the filters available for the resource.
      *
-     * @param Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return array
      */
     public function filters(Request $request)
@@ -91,7 +69,7 @@ class Invoice extends Resource
     /**
      * Get the lenses available for the resource.
      *
-     * @param Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return array
      */
     public function lenses(Request $request)
@@ -102,7 +80,7 @@ class Invoice extends Resource
     /**
      * Get the actions available for the resource.
      *
-     * @param Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return array
      */
     public function actions(Request $request)

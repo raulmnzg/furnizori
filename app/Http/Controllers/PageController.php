@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Nova\Page;
+use App\Page;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Request;

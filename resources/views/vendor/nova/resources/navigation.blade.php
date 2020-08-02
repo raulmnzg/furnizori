@@ -9,12 +9,17 @@
 
     @foreach($navigation as $group => $resources)
         @if (count($groups) > 1)
-            <h4 class="ml-8 mb-4 text-xs text-white-50% uppercase tracking-wide">{{ $group }}</h4>
+            <h4 class="ml-8 mb-4 text-xs text-white-50% uppercase tracking-wide">
+              <strong class="text-primary">
+                {{ $group }}
+              </strong>
+            </h4>
         @endif
 
         <ul class="list-reset mb-8">
             @foreach($resources as $resource)
-                <li class="leading-tight mb-4 ml-8 text-sm">
+                <li class="leading-tight mb-4 ml-8 text-sm"
+                    style="border-bottom: 2px solid rgba(0,0,0,.05); padding-bottom: 10px;">
                     <router-link :to="{
                         name: 'index',
                         params: {

@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Pdewit\ExternalUrl\ExternalUrl;
 
 class Page extends Resource
 {
@@ -77,6 +78,10 @@ class Page extends Resource
 
             Trix::make('Conţinut', 'content')
                 ->rules('required'),
+
+            ExternalUrl::make('Vedere', function () {
+                return route('pages.show', $this->slug);
+            })->linkText($this->name),
         ];
     }
 
