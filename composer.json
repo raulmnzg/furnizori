@@ -9,12 +9,20 @@
     "license": "MIT",
     "require": {
         "php": "^7.2.5",
+        "benjaminhirsch/nova-slug-field": "^1.2",
+        "coderello/laravel-nova-lang": "^1.4",
+        "david-griffiths/nova-dark-theme": "^1.0",
+        "ericlagarda/novalinkresource": "^1.0",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^6.3",
+        "jameslkingsley/nova-stripe-theme": "^1.0",
         "laravel/framework": "^7.0",
+        "laravel/nova": "*",
         "laravel/tinker": "^2.0",
-        "laravel/nova": "*"
+        "laravel/ui": "^2.1",
+        "maatwebsite/laravel-nova-excel": "^1.2",
+        "silvanite/novatoolpermissions": "^1.1"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
