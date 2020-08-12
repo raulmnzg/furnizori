@@ -4,19 +4,40 @@ namespace App\Nova;
 
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class File extends Resource
+class DataAccess extends Resource
 {
+    /**
+     * Resource Label
+     *
+     * @return string
+     */
+    public static function label()
+    {
+        return 'Cereri acces date consum
+';
+    }
 
-    public static $displayInNavigation = false;
+    /**
+     * Resource Label
+     *
+     * @return string
+     */
+    public static function singularLabel()
+    {
+        return 'Acces';
+    }
+
+    public static $group = 'Date de Consum';
 
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\File::class;
+    public static $model = \App\DataAccess::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -44,6 +65,22 @@ class File extends Resource
     {
         return [
             ID::make(__('ID'), 'id')->sortable(),
+
+            Text::make('Cod Loc Consum'
+            )->rules('required'),
+
+            Text::make('Start Mandat'
+            )->rules('required'),
+
+            Text::make('Terminare Mandat'
+            )->rules('required'),
+
+            Text::make('Status Cerere'
+            )->rules('required'),
+
+            Text::make('File'
+            )->rules('required'),
+
         ];
     }
 
