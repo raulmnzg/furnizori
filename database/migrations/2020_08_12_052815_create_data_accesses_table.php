@@ -15,6 +15,13 @@ class CreateDataAccessesTable extends Migration
     {
         Schema::create('data_accesses', function (Blueprint $table) {
             $table->id();
+
+            $table->string('clc');
+            $table->string('start_mandate');
+            $table->string('finish_mandate');
+            $table->string('status_request');
+            $table->string('file');
+
             $table->timestamps();
         });
     }
