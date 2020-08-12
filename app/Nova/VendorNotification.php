@@ -2,12 +2,14 @@
 
 namespace App\Nova;
 
+use App\Nova\Metrics\VendorNotificationsCount;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\File as FileField;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class PortfolioRemoval extends Resource
+class VendorNotification extends Resource
 {
     /**
      * Resource Label
@@ -16,7 +18,8 @@ class PortfolioRemoval extends Resource
      */
     public static function label()
     {
-        return 'Eliminări din portofoliu';
+        return 'Notificari schimbare furnizor
+';
     }
 
     /**
@@ -26,17 +29,17 @@ class PortfolioRemoval extends Resource
      */
     public static function singularLabel()
     {
-        return 'Portofoliul';
+        return 'Notificare';
     }
 
-    public static $group = 'Acces la Sistemul de Distribuție';
+    public static $group = 'Link-uri utile';
 
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\PortfolioRemoval::class;
+    public static $model = \App\VendorNotification::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -51,7 +54,7 @@ class PortfolioRemoval extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'clc'
+        'id',
     ];
 
     /**
@@ -65,13 +68,11 @@ class PortfolioRemoval extends Resource
         return [
             ID::make(__('ID'), 'id')->sortable(),
 
-            Text::make('Tip Solicitare', 'request_type')->rules('required')->sortable(),
-            Text::make('CLC', 'clc')->rules('required')->sortable(),
-            Text::make('Nume Client	', 'name')->rules('required')->sortable(),
-            Text::make('Stradă', 'city')->rules('required')->sortable(),
-            Text::make('Dată Eliminare	', 'date_removed')->rules('required')->sortable(),
-            Text::make('Dată Validare DGSR', 'dgsr_validation_date')->rules('required')->sortable(),
-            Text::make('Furnizor Solicitant', 'applicant_supplier')->rules('required')->sortable(),
+            Text::make('Serviciu', 'service')->rules('required'),
+            Text::make('Descriere', 'description')->rules('required'),
+            Text::make('Observatii', 'remarks')->rules('required'),
+            FileField::make('Atașament', 'file')->rules('required'),
+
         ];
     }
 
@@ -83,7 +84,9 @@ class PortfolioRemoval extends Resource
      */
     public function cards(Request $request)
     {
-        return [];
+        return [
+            new VendorNotificationsCount()
+        ];
     }
 
     /**

@@ -15,6 +15,12 @@ class CreateVendorNotificationsTable extends Migration
     {
         Schema::create('vendor_notifications', function (Blueprint $table) {
             $table->id();
+
+            $table->string('service');
+            $table->text('description');
+            $table->text('remarks');
+            $table->string('file');
+
             $table->timestamps();
         });
     }
