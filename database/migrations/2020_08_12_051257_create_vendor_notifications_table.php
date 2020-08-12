@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateInvoicesTable extends Migration
+class CreateVendorNotificationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,8 @@ class CreateInvoicesTable extends Migration
      */
     public function up()
     {
-        Schema::create('invoices', function (Blueprint $table) {
+        Schema::create('vendor_notifications', function (Blueprint $table) {
             $table->id();
-
-            $table->bigInteger('invoice_number');
-            $table->date('issue_date');
-            $table->date('due_date');
-
-            $table->decimal('invoice_value');
-            $table->decimal('amount_due');
-
             $table->timestamps();
         });
     }
@@ -34,6 +26,6 @@ class CreateInvoicesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('invoices');
+        Schema::dropIfExists('vendor_notifications');
     }
 }

@@ -21,18 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a5ed45fa-9766-4d8d-9bbd-3aaf6447a8c3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Client.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Nova/City.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/City.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Nova/ConsumptionCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/ConsumptionCategory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Nova/Contract.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/Contract.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Nova/District.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/District.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_03_014516_create_contracts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_03_014516_create_contracts_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/ConsumptionCategorySeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/ConsumptionCategorySeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/RoleSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/RoleSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Invoice.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Invoice.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/InvoiceFile.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Nova/Invoice.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/Invoice.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_03_002725_create_invoices_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_03_002725_create_invoices_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +211,7 @@
       <option name="presentableId" value="Default" />
       <updated>1596387965980</updated>
       <workItem from="1596387967937" duration="12858000" />
-      <workItem from="1597193416014" duration="3839000" />
+      <workItem from="1597193416014" duration="5044000" />
     </task>
     <servers />
   </component>
@@ -239,10 +231,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="357" y="482" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597196893874">
+    <state x="357" y="482" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597197741837">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="357" y="482" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1597196893874" />
+    <state x="357" y="482" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1597197741837" />
     <state x="306" y="437" key="NewPhpClassDialog" timestamp="1596406473373">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
@@ -255,10 +247,10 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="218" y="328" width="596" height="783" key="find.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1596404970621" />
-    <state x="302" y="331" width="670" height="676" key="search.everywhere.popup" timestamp="1597196914287">
+    <state x="302" y="331" width="670" height="676" key="search.everywhere.popup" timestamp="1597198361930">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="302" y="331" width="670" height="676" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1597196914287" />
+    <state x="302" y="331" width="670" height="676" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1597198361930" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
