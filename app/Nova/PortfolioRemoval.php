@@ -3,12 +3,10 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class ConsumptionCategory extends Resource
+class PortfolioRemoval extends Resource
 {
     /**
      * Resource Label
@@ -17,7 +15,7 @@ class ConsumptionCategory extends Resource
      */
     public static function label()
     {
-        return 'C. Consum';
+        return 'Eliminări din portofoliu';
     }
 
     /**
@@ -27,24 +25,24 @@ class ConsumptionCategory extends Resource
      */
     public static function singularLabel()
     {
-        return 'Categorie Consum';
+        return 'Portofoliul';
     }
 
-    public static $group = 'Clienți';
+    public static $group = 'Acces la Sistemul de Distribuție';
 
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\ConsumptionCategory::class;
+    public static $model = \App\PortfolioRemoval::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'name';
+    public static $title = 'id';
 
     /**
      * The columns that should be searched.
@@ -52,7 +50,7 @@ class ConsumptionCategory extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'name'
+        'id', 'clc'
     ];
 
     /**
@@ -66,8 +64,13 @@ class ConsumptionCategory extends Resource
         return [
             ID::make(__('ID'), 'id')->sortable(),
 
-            Text::make('Categorie Consum', 'name')->rules('required'),
-            HasMany::make('Clienți', 'clients', 'App\Nova\Client'),
+            Text::make('Tip Solicitare', 'request_type')->rules('required')->sortable(),
+            Text::make('CLC', 'clc')->rules('required')->sortable(),
+            Text::make('Nume Client	', 'name')->rules('required')->sortable(),
+            Text::make('Stradă', 'city')->rules('required')->sortable(),
+            Text::make('Dată Eliminare	', 'date_removed')->rules('required')->sortable(),
+            Text::make('Dată Validare DGSR', 'dgsr_validation_date')->rules('required')->sortable(),
+            Text::make('Furnizor Solicitant', 'applicant_supplier')->rules('required')->sortable(),
         ];
     }
 

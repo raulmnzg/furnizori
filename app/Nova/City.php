@@ -4,6 +4,7 @@ namespace App\Nova;
 
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
@@ -65,11 +66,15 @@ class City extends Resource
     {
         return [
 
+            ID::make(__('ID'), 'id')->sortable(),
+
             Text::make('Localitate', 'name')->rules('required'),
 
             BelongsTo::make('Judet/Sector', 'district', 'App\Nova\District'),
 
-            ID::make(__('ID'), 'id')->sortable(),
+            HasMany::make('Clienți', 'clients', 'App\Nova\Client'),
+
+
         ];
     }
 

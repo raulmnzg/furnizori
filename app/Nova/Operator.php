@@ -2,13 +2,13 @@
 
 namespace App\Nova;
 
+use App\Nova\Metrics\OperatorsCount;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class ConsumptionCategory extends Resource
+class Operator extends Resource
 {
     /**
      * Resource Label
@@ -17,7 +17,7 @@ class ConsumptionCategory extends Resource
      */
     public static function label()
     {
-        return 'C. Consum';
+        return 'Furnizori';
     }
 
     /**
@@ -27,7 +27,7 @@ class ConsumptionCategory extends Resource
      */
     public static function singularLabel()
     {
-        return 'Categorie Consum';
+        return 'Furnizor';
     }
 
     public static $group = 'Clienți';
@@ -37,7 +37,7 @@ class ConsumptionCategory extends Resource
      *
      * @var string
      */
-    public static $model = \App\ConsumptionCategory::class;
+    public static $model = \App\Operator::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -66,8 +66,7 @@ class ConsumptionCategory extends Resource
         return [
             ID::make(__('ID'), 'id')->sortable(),
 
-            Text::make('Categorie Consum', 'name')->rules('required'),
-            HasMany::make('Clienți', 'clients', 'App\Nova\Client'),
+            Text::make('Nume', 'name')->rules('required'),
         ];
     }
 
@@ -79,7 +78,9 @@ class ConsumptionCategory extends Resource
      */
     public function cards(Request $request)
     {
-        return [];
+        return [
+            new OperatorsCount()
+        ];
     }
 
     /**

@@ -18,5 +18,11 @@ class DatabaseSeeder extends Seeder
         // Page Seeder
         $this->call(PageSeeder::class);
 
+        // Page
+        $this->call(DistrictSeeder::class);
+        $this->call(CitySeeder::class);
+        $this->call(OperatorSeeder::class);
+        $this->call(ConsumptionCategorySeeder::class);
+
     }
 }

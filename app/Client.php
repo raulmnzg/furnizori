@@ -12,7 +12,7 @@ class Client extends Model
      *
      * @return BelongsTo
      */
-    public function client()
+    public function district()
     {
         return $this->belongsTo(District::class);
     }
@@ -34,6 +34,6 @@ class Client extends Model
      */
     public function category()
     {
-        return $this->belongsTo(ConsumptionCategory::class);
+        return $this->belongsTo(ConsumptionCategory::class, 'consumption_category_id');
     }
 }
