@@ -66,20 +66,20 @@ class DataAccess extends Resource
         return [
             ID::make(__('ID'), 'id')->sortable(),
 
-            Text::make('Cod Loc Consum'
-            )->rules('required'),
+            Text::make('Cod Loc Consum')
+                ->rules('required'),
 
-            Text::make('Start Mandat'
-            )->rules('required'),
+            Text::make('Start Mandat')
+                ->rules('required'),
 
-            Text::make('Terminare Mandat'
-            )->rules('required'),
+            Text::make('Terminare Mandat')
+                ->rules('required'),
 
-            Text::make('Status Cerere'
-            )->rules('required'),
+            Text::make('Status Cerere')
+                ->rules('required'),
 
-            Text::make('File'
-            )->rules('required'),
+            Text::make('File')
+                ->rules('required'),
 
         ];
     }
