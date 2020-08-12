@@ -21,10 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a5ed45fa-9766-4d8d-9bbd-3aaf6447a8c3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Invoice.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Invoice.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/InvoiceFile.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Nova/Invoice.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/Invoice.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_03_002725_create_invoices_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_03_002725_create_invoices_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Nova/Contract.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/Contract.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Nova/Page.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/Page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Nova/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/User.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,7 +210,7 @@
       <option name="presentableId" value="Default" />
       <updated>1596387965980</updated>
       <workItem from="1596387967937" duration="12858000" />
-      <workItem from="1597193416014" duration="5044000" />
+      <workItem from="1597193416014" duration="5274000" />
     </task>
     <servers />
   </component>
@@ -247,10 +246,10 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="218" y="328" width="596" height="783" key="find.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1596404970621" />
-    <state x="302" y="331" width="670" height="676" key="search.everywhere.popup" timestamp="1597198361930">
+    <state x="302" y="331" width="670" height="676" key="search.everywhere.popup" timestamp="1597198676196">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="302" y="331" width="670" height="676" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1597198361930" />
+    <state x="302" y="331" width="670" height="676" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1597198676196" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
