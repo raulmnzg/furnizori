@@ -8,6 +8,7 @@ use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Saumini\Count\RelationshipCount;
 
 class District extends Resource
 {
@@ -68,6 +69,8 @@ class District extends Resource
             ID::make(__('ID'), 'id')->sortable(),
 
             Text::make('Nume', 'name')->rules('required'),
+
+            RelationshipCount::make('Clienți', 'clients'),
 
             HasMany::make('Localitate', 'cities', 'App\Nova\City'),
             HasMany::make('Clienți', 'clients', 'App\Nova\Client'),

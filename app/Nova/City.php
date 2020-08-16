@@ -8,6 +8,7 @@ use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Saumini\Count\RelationshipCount;
 
 class City extends Resource
 {
@@ -71,6 +72,8 @@ class City extends Resource
             Text::make('Localitate', 'name')->rules('required'),
 
             BelongsTo::make('Judet/Sector', 'district', 'App\Nova\District'),
+
+            RelationshipCount::make('Clienți', 'clients'),
 
             HasMany::make('Clienți', 'clients', 'App\Nova\Client'),
 

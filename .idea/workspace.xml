@@ -21,9 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="a5ed45fa-9766-4d8d-9bbd-3aaf6447a8c3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Nova/DataAccess.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/DataAccess.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_12_051632_create_files_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_12_051632_create_files_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_12_052815_create_data_accesses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_12_052815_create_data_accesses_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/District.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/District.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Nova/City.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/City.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Nova/ConsumptionCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/ConsumptionCategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Nova/District.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/District.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,6 +177,8 @@
       <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
       <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf" />
+      <path value="$PROJECT_DIR$/vendor/saumini/count" />
+      <path value="$PROJECT_DIR$/vendor/titasgailius/search-relations" />
     </include_path>
   </component>
   <component name="ProjectId" id="1fYHAworcgJVYqsDPcQtJQ7BtcO" />
@@ -210,7 +215,7 @@
       <option name="presentableId" value="Default" />
       <updated>1596387965980</updated>
       <workItem from="1596387967937" duration="12858000" />
-      <workItem from="1597193416014" duration="6357000" />
+      <workItem from="1597193416014" duration="7432000" />
     </task>
     <servers />
   </component>
@@ -230,10 +235,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="357" y="482" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597197741837">
+    <state x="357" y="482" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597200089358">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="357" y="482" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1597197741837" />
+    <state x="357" y="482" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1597200089358" />
     <state x="306" y="437" key="NewPhpClassDialog" timestamp="1597199083805">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
@@ -246,10 +251,10 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="218" y="328" width="596" height="783" key="find.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1596404970621" />
-    <state x="302" y="331" width="670" height="676" key="search.everywhere.popup" timestamp="1597199759034">
+    <state x="302" y="331" width="670" height="676" key="search.everywhere.popup" timestamp="1597200159455">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="302" y="331" width="670" height="676" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1597199759034" />
+    <state x="302" y="331" width="670" height="676" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1597200159455" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

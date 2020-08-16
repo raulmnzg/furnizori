@@ -7,6 +7,7 @@ use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Saumini\Count\RelationshipCount;
 
 class ConsumptionCategory extends Resource
 {
@@ -66,7 +67,11 @@ class ConsumptionCategory extends Resource
         return [
             ID::make(__('ID'), 'id')->sortable(),
 
-            Text::make('Categorie Consum', 'name')->rules('required'),
+            Text::make('Categorie Consum', 'name')
+                ->rules('required'),
+
+            RelationshipCount::make('Clienți', 'clients'),
+
             HasMany::make('Clienți', 'clients', 'App\Nova\Client'),
         ];
     }

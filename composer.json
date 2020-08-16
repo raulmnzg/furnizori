@@ -23,7 +23,9 @@
         "laravel/ui": "^2.1",
         "maatwebsite/laravel-nova-excel": "^1.2",
         "pdewit/nova-external-url": "^1.0",
-        "silvanite/novatoolpermissions": "^1.1"
+        "saumini/count": "^1.0",
+        "silvanite/novatoolpermissions": "^1.1",
+        "titasgailius/search-relations": "^1.0"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
