@@ -1,5 +1,6 @@
 <?php
 
+use App\ConsumptionCategory;
 use Illuminate\Database\Seeder;
 
 class ConsumptionCategorySeeder extends Seeder
@@ -11,6 +12,8 @@ class ConsumptionCategorySeeder extends Seeder
      */
     public function run()
     {
-        //
+        ConsumptionCategory::create([
+            'name' => '1'
+        ]);
     }
 }

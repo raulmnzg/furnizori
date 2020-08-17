@@ -65,7 +65,7 @@ class ConsumptionCategory extends Resource
         return [
             ID::make(__('ID'), 'id')->sortable(),
 
-            Text::make('Categorie Consum')->rules('required',)
+            Text::make('Categorie Consum', 'name')->rules('required')
         ];
     }
 

@@ -15,6 +15,23 @@ class CreateContractsTable extends Migration
     {
         Schema::create('contracts', function (Blueprint $table) {
             $table->id();
+            $table->string('type')->nullable();
+            $table->string('email');
+            $table->string('phone');
+
+            $table->string('ci_seria');
+            $table->string('ci_nr');
+            $table->string('cnp');
+
+            $table->string('address');
+            $table->string('district');
+            $table->string('location');
+
+            $table->string('contract')->nullable();
+            $table->string('notificare')->nullable();
+            $table->string('request_mandate')->nullable();
+            $table->string('standard_application')->nullable();
+            $table->string('request_for_conclusion')->nullable();
             $table->timestamps();
         });
     }

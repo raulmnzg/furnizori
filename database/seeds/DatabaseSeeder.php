@@ -18,5 +18,8 @@ class DatabaseSeeder extends Seeder
         // Page Seeder
         $this->call(PageSeeder::class);
 
+        // Locations
+        $this->call(DistrictSeeder::class);
+
     }
 }

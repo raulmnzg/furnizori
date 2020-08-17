@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Nova\Dashboards\ContractInsights;
+use App\Nova\Dashboards\SystemInsights;
 use App\Nova\Metrics\ClientsCount;
 use EricLagarda\NovaLinkResource\NovaLinkResource;
 use Illuminate\Support\Facades\Gate;
@@ -66,7 +68,10 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
      */
     protected function dashboards()
     {
-        return [];
+        return [
+            new SystemInsights(),
+            new ContractInsights()
+        ];
     }
 
     /**

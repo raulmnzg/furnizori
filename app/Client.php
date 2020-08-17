@@ -27,6 +27,11 @@ class Client extends Model
         return $this->belongsTo(City::class);
     }
 
+    public function district()
+    {
+        return $this->belongsTo(District::class);
+    }
+
     /**
      * A client belongs to a category
      *
