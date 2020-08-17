@@ -2,16 +2,12 @@
 
 namespace App\Nova;
 
-use App\Nova\Metrics\UsersCount;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\BelongsToMany;
-use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Password;
 use Laravel\Nova\Fields\Text;
-use Silvanite\NovaToolPermissions\Role;
+use Laravel\Nova\Http\Requests\NovaRequest;
 
-class User extends Resource
+class DataAccess extends Resource
 {
     /**
      * Resource Label
@@ -20,7 +16,8 @@ class User extends Resource
      */
     public static function label()
     {
-        return 'Utilizatori';
+        return 'Cereri acces date consum
+';
     }
 
     /**
@@ -30,24 +27,24 @@ class User extends Resource
      */
     public static function singularLabel()
     {
-        return 'Utilizator';
+        return 'Acces';
     }
 
-    public static $group = 'Administrare';
+    public static $group = 'Date de Consum';
 
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\User::class;
+    public static $model = \App\DataAccess::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'name';
+    public static $title = 'id';
 
     /**
      * The columns that should be searched.
@@ -55,7 +52,7 @@ class User extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'name', 'email',
+        'id',
     ];
 
     /**
@@ -67,26 +64,23 @@ class User extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make()->sortable(),
+            ID::make(__('ID'), 'id')->sortable(),
 
-            Gravatar::make()->maxWidth(50),
+            Text::make('Cod Loc Consum')
+                ->rules('required'),
 
-            Text::make('Name')
-                ->sortable()
-                ->rules('required', 'max:255'),
+            Text::make('Start Mandat')
+                ->rules('required'),
 
-            Text::make('Email')
-                ->sortable()
-                ->rules('required', 'email', 'max:254')
-                ->creationRules('unique:users,email')
-                ->updateRules('unique:users,email,{{resourceId}}'),
+            Text::make('Terminare Mandat')
+                ->rules('required'),
 
-            Password::make('Password')
-                ->onlyOnForms()
-                ->creationRules('required', 'string', 'min:8')
-                ->updateRules('nullable', 'string', 'min:8'),
+            Text::make('Status Cerere')
+                ->rules('required'),
 
-            BelongsToMany::make('Roles', 'roles', Role::class),
+            Text::make('File')
+                ->rules('required'),
+
         ];
     }
 
@@ -98,9 +92,7 @@ class User extends Resource
      */
     public function cards(Request $request)
     {
-        return [
-            new UsersCount()
-        ];
+        return [];
     }
 
     /**

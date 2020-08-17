@@ -2,14 +2,22 @@
 
 namespace App\Nova\Metrics;
 
-use App\Contract;
-use DateInterval;
-use DateTimeInterface;
+use App\District;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Metrics\Value;
 
-class ContractsCount extends Value
+class DistrictsCount extends Value
 {
+    /**
+     * Card name
+     *
+     * @return string
+     */
+    public function name()
+    {
+        return 'Județe';
+    }
+
     /**
      * Calculate the value of the metric.
      *
@@ -18,7 +26,7 @@ class ContractsCount extends Value
      */
     public function calculate(NovaRequest $request)
     {
-        return $this->count($request, Contract::class);
+        return $this->count($request, District::class);
     }
 
     /**
@@ -42,7 +50,7 @@ class ContractsCount extends Value
     /**
      * Determine for how many minutes the metric should be cached.
      *
-     * @return  DateTimeInterface|DateInterval|float|int
+     * @return  \DateTimeInterface|\DateInterval|float|int
      */
     public function cacheFor()
     {
@@ -56,6 +64,6 @@ class ContractsCount extends Value
      */
     public function uriKey()
     {
-        return 'contracts-count';
+        return 'districts-count';
     }
 }

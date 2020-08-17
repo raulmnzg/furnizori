@@ -2,6 +2,7 @@
 
 namespace App\Nova;
 
+use App\Nova\Metrics\ContractsCount;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\HasMany;
@@ -33,8 +34,7 @@ class Contract extends Resource
         return 'Contract';
     }
 
-    public static $group = 'Contracte';
-
+    public static $group = 'Acces la Sistemul de Distribuție';
 
     /**
      * The model the resource corresponds to.
@@ -166,7 +166,9 @@ class Contract extends Resource
      */
     public function cards(Request $request)
     {
-        return [];
+        return [
+            new ContractsCount()
+        ];
     }
 
     /**

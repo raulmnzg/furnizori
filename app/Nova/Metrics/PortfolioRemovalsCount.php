@@ -2,13 +2,13 @@
 
 namespace App\Nova\Metrics;
 
-use App\Contract;
+use App\PortfolioRemoval;
 use DateInterval;
 use DateTimeInterface;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Metrics\Value;
 
-class ContractsCount extends Value
+class PortfolioRemovalsCount extends Value
 {
     /**
      * Calculate the value of the metric.
@@ -18,7 +18,7 @@ class ContractsCount extends Value
      */
     public function calculate(NovaRequest $request)
     {
-        return $this->count($request, Contract::class);
+        return $this->count($request, PortfolioRemoval::class);
     }
 
     /**
@@ -56,6 +56,6 @@ class ContractsCount extends Value
      */
     public function uriKey()
     {
-        return 'contracts-count';
+        return 'portfolio-removals-count';
     }
 }

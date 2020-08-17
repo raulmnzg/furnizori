@@ -2,14 +2,24 @@
 
 namespace App\Nova\Metrics;
 
-use App\Contract;
+use App\VendorNotification;
 use DateInterval;
 use DateTimeInterface;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Metrics\Value;
 
-class ContractsCount extends Value
+class VendorNotificationsCount extends Value
 {
+    /**
+     * Card name
+     *
+     * @return string
+     */
+    public function name()
+    {
+        return 'Notificari';
+    }
+
     /**
      * Calculate the value of the metric.
      *
@@ -18,7 +28,7 @@ class ContractsCount extends Value
      */
     public function calculate(NovaRequest $request)
     {
-        return $this->count($request, Contract::class);
+        return $this->count($request, VendorNotification::class);
     }
 
     /**
@@ -46,7 +56,7 @@ class ContractsCount extends Value
      */
     public function cacheFor()
     {
-        return now()->addMinutes(5);
+        // return now()->addMinutes(5);
     }
 
     /**
@@ -56,6 +66,6 @@ class ContractsCount extends Value
      */
     public function uriKey()
     {
-        return 'contracts-count';
+        return 'vendor-notifications-count';
     }
 }

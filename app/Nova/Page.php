@@ -2,6 +2,7 @@
 
 namespace App\Nova;
 
+use App\Nova\Metrics\PagesCount;
 use Benjaminhirsch\NovaSlugField\Slug;
 use Benjaminhirsch\NovaSlugField\TextWithSlug;
 use Illuminate\Http\Request;
@@ -93,7 +94,9 @@ class Page extends Resource
      */
     public function cards(Request $request)
     {
-        return [];
+        return [
+            new PagesCount()
+        ];
     }
 
     /**

@@ -11,16 +11,6 @@ use Laravel\Nova\Metrics\Value;
 class UsersCount extends Value
 {
     /**
-     * Card name
-     *
-     * @return string
-     */
-    public function name()
-    {
-        return 'Număr de utilizatori';
-    }
-
-    /**
      * Calculate the value of the metric.
      *
      * @param NovaRequest $request

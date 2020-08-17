@@ -2,8 +2,13 @@
 
 namespace App\Nova;
 
+use App\Nova\Metrics\InvoicesCount;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Date;
+use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Number;
+use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Invoice extends Resource
@@ -63,6 +68,15 @@ class Invoice extends Resource
     {
         return [
             ID::make(__('ID'), 'id')->sortable(),
+
+            Number::make('Număr Factură','invoice_number')->rules('required'),
+            Date::make('Dată emitere','issue_date')->rules('required'),
+            Date::make('Dată scadență','due_date')->rules('required'),
+
+            Number::make('Valoare factură','invoice_value')->rules('required'),
+            Number::make('Rest de plată','amount_due')->rules('required'),
+
+            HasMany::make('Documente', 'files', 'App\Nova\InvoiceFile'),
         ];
     }
 
@@ -74,7 +88,9 @@ class Invoice extends Resource
      */
     public function cards(Request $request)
     {
-        return [];
+        return [
+            new InvoicesCount()
+        ];
     }
 
     /**

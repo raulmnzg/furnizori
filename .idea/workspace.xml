@@ -21,14 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="a5ed45fa-9766-4d8d-9bbd-3aaf6447a8c3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Nova/Contract.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/Contract.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/NovaServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/NovaServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/District.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/District.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Nova/City.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/City.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Nova/ConsumptionCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/ConsumptionCategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Nova/District.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/District.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/ConsumptionCategorySeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/ConsumptionCategorySeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gaz/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gaz/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,6 +177,8 @@
       <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
       <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf" />
+      <path value="$PROJECT_DIR$/vendor/saumini/count" />
+      <path value="$PROJECT_DIR$/vendor/titasgailius/search-relations" />
     </include_path>
   </component>
   <component name="ProjectId" id="1fYHAworcgJVYqsDPcQtJQ7BtcO" />
@@ -216,8 +216,7 @@
       <option name="presentableId" value="Default" />
       <updated>1596387965980</updated>
       <workItem from="1596387967937" duration="12858000" />
-      <workItem from="1596914603702" duration="1548000" />
-      <workItem from="1597609983954" duration="1622000" />
+      <workItem from="1597193416014" duration="7432000" />
     </task>
     <servers />
   </component>
@@ -237,15 +236,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="201" y="301" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1596931260285">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="201" y="301" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1596931260285" />
-    <state x="357" y="482" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1596408541077" />
-    <state x="306" y="437" key="NewPhpClassDialog" timestamp="1596406473373">
+    <state x="357" y="482" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597200089358">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="306" y="437" key="NewPhpClassDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1596406473373" />
+    <state x="357" y="482" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1597200089358" />
+    <state x="306" y="437" key="NewPhpClassDialog" timestamp="1597199083805">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="306" y="437" key="NewPhpClassDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1597199083805" />
     <state x="303" y="637" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596407131431">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
@@ -254,17 +252,10 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="218" y="328" width="596" height="783" key="find.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1596404970621" />
-    <state width="600" height="440" key="javadoc.popup" timestamp="1596915545052">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="302" y="331" width="670" height="676" key="search.everywhere.popup" timestamp="1597200159455">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="600" height="440" key="javadoc.popup/0.0.1440.900@0.0.1440.900" timestamp="1596915545052" />
-    <state x="-1270" y="387" width="754" height="423" key="search.everywhere.popup" timestamp="1597613925342">
-      <screen x="-1440" y="180" width="1440" height="900" />
-    </state>
-    <state x="-1129" y="184" width="670" height="376" key="search.everywhere.popup/-1280.0.1280.800/0.0.1130.834@-1280.0.1280.800" timestamp="1596931406335" />
-    <state x="-1270" y="387" width="754" height="423" key="search.everywhere.popup/-1440.180.1440.900/0.0.1920.1080@-1440.180.1440.900" timestamp="1597613925342" />
-    <state x="170" y="207" width="670" height="423" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1596931284849" />
-    <state x="302" y="331" width="670" height="676" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1596410330442" />
+    <state x="302" y="331" width="670" height="676" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1597200159455" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

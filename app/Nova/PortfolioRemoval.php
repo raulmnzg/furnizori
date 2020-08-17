@@ -2,16 +2,12 @@
 
 namespace App\Nova;
 
-use App\Nova\Metrics\UsersCount;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\BelongsToMany;
-use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Password;
 use Laravel\Nova\Fields\Text;
-use Silvanite\NovaToolPermissions\Role;
+use Laravel\Nova\Http\Requests\NovaRequest;
 
-class User extends Resource
+class PortfolioRemoval extends Resource
 {
     /**
      * Resource Label
@@ -20,7 +16,7 @@ class User extends Resource
      */
     public static function label()
     {
-        return 'Utilizatori';
+        return 'Eliminări din portofoliu';
     }
 
     /**
@@ -30,24 +26,24 @@ class User extends Resource
      */
     public static function singularLabel()
     {
-        return 'Utilizator';
+        return 'Portofoliul';
     }
 
-    public static $group = 'Administrare';
+    public static $group = 'Acces la Sistemul de Distribuție';
 
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\User::class;
+    public static $model = \App\PortfolioRemoval::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'name';
+    public static $title = 'id';
 
     /**
      * The columns that should be searched.
@@ -55,7 +51,7 @@ class User extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'name', 'email',
+        'id', 'clc'
     ];
 
     /**
@@ -67,26 +63,15 @@ class User extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make()->sortable(),
+            ID::make(__('ID'), 'id')->sortable(),
 
-            Gravatar::make()->maxWidth(50),
-
-            Text::make('Name')
-                ->sortable()
-                ->rules('required', 'max:255'),
-
-            Text::make('Email')
-                ->sortable()
-                ->rules('required', 'email', 'max:254')
-                ->creationRules('unique:users,email')
-                ->updateRules('unique:users,email,{{resourceId}}'),
-
-            Password::make('Password')
-                ->onlyOnForms()
-                ->creationRules('required', 'string', 'min:8')
-                ->updateRules('nullable', 'string', 'min:8'),
-
-            BelongsToMany::make('Roles', 'roles', Role::class),
+            Text::make('Tip Solicitare', 'request_type')->rules('required')->sortable(),
+            Text::make('CLC', 'clc')->rules('required')->sortable(),
+            Text::make('Nume Client	', 'name')->rules('required')->sortable(),
+            Text::make('Stradă', 'city')->rules('required')->sortable(),
+            Text::make('Dată Eliminare	', 'date_removed')->rules('required')->sortable(),
+            Text::make('Dată Validare DGSR', 'dgsr_validation_date')->rules('required')->sortable(),
+            Text::make('Furnizor Solicitant', 'applicant_supplier')->rules('required')->sortable(),
         ];
     }
 
@@ -98,9 +83,7 @@ class User extends Resource
      */
     public function cards(Request $request)
     {
-        return [
-            new UsersCount()
-        ];
+        return [];
     }
 
     /**

@@ -16,4 +16,14 @@ class District extends Model
     {
         return $this->hasMany(City::class);
     }
+
+    /**
+     * A district has many clients
+     *
+     * @return HasMany
+     */
+    public function clients()
+    {
+        return $this->hasMany(Client::class);
+    }
 }
